@@ -1,25 +1,26 @@
 //Imports 
 import mongoose from 'mongoose';//Importamos el modulo para la base de datos
 
+//Aqui se define el modelo del usuario para guardarlo en la base de datos
 const userSchema = new mongoose.Schema({
-    username:{
-        type:String,
-        required:true,
-        trim: true
+    username:{// aqui se define el username de la tabla usuario 
+        type:String, //El tipo de dato que sera
+        required:true, // El campo es requerido
+        trim: true //Aqui para anular los espacion si el usuario ingresa alguno
     },
-    email:{
-        type: String,
-        required: true,
-        unique: true
+    email:{// aqui se define el email de la tabla usuario 
+        type: String, //El tipo de dato que sera
+        required: true,// El campo es requerido
+        unique: true // Aqui se define que no se repita ningun email
     },
-    password:{
-        type: String,
-        required: true
+    password:{// aqui se define el password de la tabla usuario 
+        type: String, //El tipo de dato que sera
+        required: true// El campo es requerido
     }
     
 },
 {
-    timestamps:true
+    timestamps:true // Aqui se agrega la fecha de creacion y actualizacion 
 })
 
-export default mongoose.model('User', userSchema)
+export default mongoose.model('User', userSchema) //Aqui exportamos el esquema para utilizarlo en otras partes

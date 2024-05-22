@@ -68,7 +68,7 @@ export const profile = async (req, res) => {
     id: userFound._id,
     username: userFound.username,
     email: userFound.email,
-    createdAT: userFound.CreatedAT,
-    updatedAT: userFound.UpdatedAT,
+    createdAT: userFound.createdAt,
+    updatedAT: userFound.updatedAt,
    })
 }

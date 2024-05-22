@@ -1,1 +1,1 @@
-export const TOKEN_SECRET = 'tokenSecret1022';
+export const TOKEN_SECRET = 'tokenSecret1022'; //Palabra clave

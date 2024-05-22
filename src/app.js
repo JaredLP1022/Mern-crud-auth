@@ -1,16 +1,17 @@
-import express from 'express';
-import morgan from 'morgan';
-import router from './routes/auth.route.js';
-import cookieParser from 'cookie-parser';
+//Imports 
+import express from 'express'; // es un modulo para el back-end
+import morgan from 'morgan';// es un modulo para ver las peticiones que llegan por consola
+import router from './routes/auth.route.js'; //es el archivo que importa las rutas
+import cookieParser from 'cookie-parser'; // nos ayuda a leer las cookies
 
 const app = express();
 
 
-app.use(morgan('dev'));
-app.use(express.json());
-app.use(cookieParser());
+app.use(morgan('dev')); //Mostramos las peticiones en consola
+app.use(express.json());//podemos leer archvios json 
+app.use(cookieParser());//podemos leer las cookies
 
-app.use('/API',router);
+app.use('/API',router);// Aqui estan todas las rutas de nuestra aplicacion 
 
 
-export default app;
+export default app; //exportamos app para que funcione la aplicacion
